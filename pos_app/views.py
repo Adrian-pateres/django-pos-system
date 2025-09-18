@@ -3,6 +3,21 @@ from django.contrib.auth.decorators import login_required
 from .models import Product, Transaction, TransactionItem
 from .forms import ProductForm, TransactionForm, TransactionItemFormSet
 
+
+def login_view(request):
+    if request.method == "POST":
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect("home")  # 👈 redirect to home after login
+    else:
+        form = AuthenticationForm()
+    return render(request, "pos_app/login.html", {"form": form})
+
+def home(request):
+    return render(request, "pos_app/home.html")
+
 @login_required
 def product_list(request):
     products = Product.objects.all()

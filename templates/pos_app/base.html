@@ -1,20 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Django POS System</title>
+    <title>POS System</title>
     <link rel="stylesheet" href="{% static 'pos_app/css/style.css' %}">
 </head>
 <body>
-    <header>
-        <h1>Django POS System</h1>
-        <nav>
-            <a href="{% url 'product_list' %}">Products</a> |
-            <a href="{% url 'product_create' %}">Add Product</a> |
-            <a href="{% url 'transaction_create' %}">New Transaction</a>
-        </nav>
-    </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+    <nav>
+        <a href="/">Home</a> | <a href="/admin/">Admin</a>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
 </body>
 </html>
