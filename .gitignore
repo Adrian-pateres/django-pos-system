@@ -1,25 +1,75 @@
-# Python
-__pycache__/
-*.py[cod]
-*.so
-
-# Virtualenv
-.venv/
-venv/
-env/
-ENV/
-
 # Django
-*.sqlite3
-db.sqlite3
-/media/
-staticfiles/
-local_settings.py
 *.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media/
 
-# Environments
-.env
-.env.*
+# Environment
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
-# VSCode
+# IDE
 .vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Package files
+*.egg
+*.egg-info
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+
+# Static files
+/staticfiles/
+
+# macOS
+.DS_Store
