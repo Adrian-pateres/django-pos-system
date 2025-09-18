@@ -1,0 +1,14 @@
+{% extends 'pos_app/base.html' %}
+
+{% block content %}
+<h2>New Transaction</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {{ formset.management_form }}
+    {% for subform in formset %}
+        {{ subform.as_p }}
+    {% endfor %}
+    <button type="submit">Save</button>
+</form>
+{% endblock %}

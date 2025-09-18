@@ -1,0 +1,14 @@
+{% extends 'pos_app/base.html' %}
+
+{% block content %}
+<h2>Transaction Details</h2>
+<p>Teller: {{ transaction.teller }}</p>
+<p>Date: {{ transaction.created_at }}</p>
+
+<h3>Items:</h3>
+<ul>
+    {% for item in items %}
+        <li>{{ item.product.name }} - Qty: {{ item.quantity }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
